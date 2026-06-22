@@ -19,33 +19,33 @@ The dataset contains user-level experiment data collected during the onboarding 
 
 ### Dataset Overview
 
-Item                         Details               
+Item                         : Details               
 
-Original Records              1,408                 
-Final Records After Cleaning  1,400                 
-Number of Columns             16                    
-Experiment Groups             Control and Treatment 
+Original Records             : 1,408                 
+Final Records After Cleaning : 1,400                 
+Number of Columns            : 16                    
+Experiment Groups            : Control and Treatment 
 
 ### Key Columns
 
- Column                Description                           
+ Column                :  Description                           
 
- user_id               Unique user identifier                
- experiment_group      Control or Treatment                  
- signup_date           User signup date                      
- region                User region                           
- device_type           Desktop, Mobile, or Tablet            
- traffic_source        User acquisition source               
- plan_type             Free, Basic, or Premium               
- visited_landing_page  Whether user visited landing page     
- started_trial         Whether user started a trial          
- completed_onboarding  Whether user completed onboarding     
- converted_to_paid     Whether user became a paying customer 
- revenue_30d           Revenue generated within 30 days      
- support_tickets_30d   Number of support tickets raised      
- refund_requested      Whether a refund was requested        
- engagement_score      User engagement score                 
- days_to_convert       Days required to convert              
+ user_id               : Unique user identifier                
+ experiment_group      : Control or Treatment                  
+ signup_date           : User signup date                      
+ region                : User region                           
+ device_type           : Desktop, Mobile, or Tablet            
+ traffic_source        : User acquisition source               
+ plan_type             : Free, Basic, or Premium               
+ visited_landing_page  : Whether user visited landing page     
+ started_trial         : Whether user started a trial          
+ completed_onboarding  : Whether user completed onboarding     
+ converted_to_paid     : Whether user became a paying customer 
+ revenue_30d           : Revenue generated within 30 days      
+ support_tickets_30d   : Number of support tickets raised      
+ refund_requested      : Whether a refund was requested        
+ engagement_score      : User engagement score                 
+ days_to_convert       : Days required to convert              
 
 ---
 
@@ -137,15 +137,15 @@ The following steps were completed before analysis:
 
 ### Data Preparation Summary
 
- Check                            Result                       
+ Check                           : Result                       
 
- Duplicate User Records           8 duplicate records removed  
- Missing device_type values       18 replaced with "Unknown"   
- Missing traffic_source values    24 replaced with "Unknown"   
- Missing engagement_score values  14 filled using group median 
- Revenue Outliers                 4 identified and retained    
- Binary Value Issues              None found                   
- Funnel Logic Issues              None found                   
+ Duplicate User Records          : 8 duplicate records removed  
+ Missing device_type values      : 18 replaced with "Unknown"   
+ Missing traffic_source values   : 24 replaced with "Unknown"   
+ Missing engagement_score values : 14 filled using group median 
+ Revenue Outliers                : 4 identified and retained    
+ Binary Value Issues             : None found                   
+ Funnel Logic Issues             : None found                   
 
 Detailed analysis is available in:
 
@@ -155,16 +155,16 @@ Detailed analysis is available in:
 
 ### Overall Results
 
- Metric                      Control    Treatment 
+ Metric                    |  Control  |  Treatment 
 
- User Count                  690        710       
- Landing Page Visit Rate     63.62%     72.39%    
- Trial Start Rate            25.07%     29.01%    
- Onboarding Completion Rate  15.65%     21.13%    
- Paid Conversion Rate        3.19%      7.04%     
- Avg Revenue Per User        51.97      54.25     
- Avg Engagement Score        57.03      62.94     
- Avg Days to Convert         8.86 Days  6.40 Days 
+ User Count                |  690      |  710       
+ Landing Page Visit Rate   |  63.62%   |  72.39%    
+ Trial Start Rate          |  25.07%   |  29.01%    
+ Onboarding Completion Rate|  15.65%   |  21.13%    
+ Paid Conversion Rate      |  3.19%    |  7.04%     
+ Avg Revenue Per User      |  51.97    |  54.25     
+ Avg Engagement Score      |  57.03    |  62.94     
+ Avg Days to Convert       |  8.86 Days | 6.40 Days 
 
 The Treatment group performed better than the Control group across most key metrics and achieved a substantially higher Paid Conversion Rate.
 
@@ -174,20 +174,20 @@ A One-Tailed Two-Proportion Z-Test was performed using Paid Conversion Rate.
 
 ### Test Inputs
 
- Group      Users  Converted Users  Conversion Rate 
+ Group   |   Users | Converted Users |  Conversion Rate 
 
- Control    690    22               3.19%           
- Treatment  710    50               7.04%           
+ Control  |  690   | 22              | 3.19%           
+ Treatment|  710   |50               |7.04%           
 
 ### Test Results
 
- Item                Value                            
+ Item               | Value                            
  
- Test Type           One-Tailed Two-Proportion Z-Test 
- Significance Level  0.05                             
- Z-Statistic         3.26                             
- P-Value             0.0005                           
- Decision            Reject Null Hypothesis           
+ Test Type          | One-Tailed Two-Proportion Z-Test 
+ Significance Level |0.05                             
+ Z-Statistic        |  3.26                             
+ P-Value            | 0.0005                           
+ Decision           |Reject Null Hypothesis           
 
 ### Interpretation
 
@@ -206,13 +206,13 @@ The recommendation was not based only on conversion performance.
 
 Several guardrail metrics were reviewed.
 
- Metric                      Control    Treatment  Observation                              
+ Metric                     |  Control  |  Treatment | Observation                              
   
- Refund Rate                 0.00%      0.42%      Small increase observed                  
- Support Ticket Rate         14.78%     24.79%     Increased noticeably                     
- Revenue per Converted User  1630.10    770.41     Lower average revenue per converted user 
- Avg Engagement Score        57.03      62.94      Improved                                 
- Avg Days to Convert         8.86 Days  6.40 Days  Improved                                 
+ Refund Rate                | 0.00%     | 0.42%       |Small increase observed                  
+ Support Ticket Rate        |14.78%     | 24.79%     |Increased noticeably                     
+ Revenue per Converted User | 1630.10   | 770.41     |Lower average revenue per converted user 
+ Avg Engagement Score       | 57.03     | 62.94      |Improved                                 
+ Avg Days to Convert        | 8.86 Days | 6.40 Days  |Improved                                 
 
 **Support ticket rate** is the most serious concern. A 10 percentage point
 increase that is consistent across every device type (Desktop +8.94pp, Mobile

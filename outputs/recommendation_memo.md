@@ -56,15 +56,15 @@ Guardrail Metrics (must not be ignored even if North Star improves)
 
 ## Experiment Result Summary
 
-Metric                     Control    Treatment 
+Metric                      | Control    | Treatment 
 
- Landing Page Visit Rate     63.62%     72.39%    
- Trial Start Rate            25.07%     29.01%    
- Onboarding Completion Rate  15.65%     21.13%    
- Paid Conversion Rate        3.19%      7.04%     
- Avg Revenue Per User        51.97      54.25     
- Avg Engagement Score        57.03      62.94     
- Avg Days to Convert         8.86 days  6.40 days 
+ Landing Page Visit Rate    | 63.62%    | 72.39%    
+ Trial Start Rate           | 25.07%    | 29.01%    
+ Onboarding Completion Rate | 15.65%    | 21.13%    
+ Paid Conversion Rate       | 3.19%     | 7.04%     
+ Avg Revenue Per User       | 51.97     | 54.25     
+ Avg Engagement Score       | 57.03     | 62.94     
+ Avg Days to Convert        | 8.86 days | 6.40 days 
 
 The Treatment group performed better than the Control group across most funnel metrics. Users completed onboarding more often, converted faster, and showed higher engagement.
 
@@ -72,15 +72,15 @@ The Treatment group performed better than the Control group across most funnel m
 
 A One-Tailed Two-Proportion Z-Test was performed using Paid Conversion Rate as the primary metric.
 
- Test Output                Value                   
+ Test Output               : Value                   
 
- Control Conversion Rate    3.19%                   
- Treatment Conversion Rate  7.04%                   
- Absolute Lift              +3.85 Percentage Points 
- Z-Statistic                3.26                    
- P-Value                    0.0005                  
- Significance Level          0.05                    
- Decision                   Reject Null Hypothesis  
+ Control Conversion Rate   : 3.19%                   
+ Treatment Conversion Rate : 7.04%                   
+ Absolute Lift             : +3.85 Percentage Points 
+ Z-Statistic               : 3.26                    
+ P-Value                   : 0.0005                  
+ Significance Level        :  0.05                    
+ Decision                  : Reject Null Hypothesis  
 
 Since the p-value is lower than 0.05, the Null Hypothesis was rejected.
 This means there is enough evidence to conclude that the new onboarding campaign improved Paid Conversion Rate.
@@ -89,11 +89,11 @@ This means there is enough evidence to conclude that the new onboarding campaign
 
 The recommendation was not based only on conversion improvement. Several guardrail metrics were also reviewed.
 
-Guardrail Metric            Control    Treatment     Observation                              
+Guardrail Metric          |  Control   | Treatment   |  Observation                              
 
-Refund Rate                 0.00%       0.42%        Small increase observed                   Support Ticket Rate         14.78%      24.79%      Increased noticeably                     Revenue per Converted User  1630.10     770.41       Lower average revenue per converted user 
-Avg Engagement Score        57.03       62.94        Improved                                 
-Avg Days to Convert         8.86 days   6.40 days    Improved            
+Refund Rate               |  0.00%      | 0.42%      |  Small increase observed                   Support Ticket Rate       |  14.78%     | 24.79%     | Increased noticeably                     Revenue per Converted User|  1630.10    | 770.41     |  Lower average revenue per converted user 
+Avg Engagement Score      |  57.03      | 62.94      | Improved                                 
+Avg Days to Convert       |  8.86 days  | 6.40 days  | Improved            
 
 **Support ticket rate** is the most serious concern. A 10 percentage point
 increase that is consistent across every device type (Desktop +8.94pp, Mobile
